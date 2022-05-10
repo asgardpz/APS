@@ -1,0 +1,50 @@
+﻿<Window x:Class="SampleCode.Charts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:SampleCode"
+        mc:Ignorable="d"
+        Title="生產看板" Height="768" Width="1024" Top="0" Left="0" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid x:Name="mygrid">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="580" Margin="10,150,0,0" VerticalAlignment="Top" Width="998">
+            <Canvas>
+                <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left" Height="574" Width="989" Background="White">
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis  Title="產出時間(時)" Labels="{Binding Labels}" FontSize="14">
+                            <lvc:Axis.Separator>
+                                <lvc:Separator Step="1"/>
+                            </lvc:Axis.Separator>
+                        </lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis MaxValue="100" MinValue="0" MinRange="0" MaxRange="100"/>
+                    </lvc:CartesianChart.AxisY>
+                </lvc:CartesianChart>
+            </Canvas>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="10,10,0,0" VerticalAlignment="Top" Width="998">
+            <Canvas Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+                <Label Content="排程名稱" Canvas.Left="7" Canvas.Top="56"/>
+                <TextBox x:Name="TB_NAME" Height="23" Canvas.Left="78" TextWrapping="Wrap" Canvas.Top="59" Width="149" IsEnabled="False" Text="JOB0001"/>
+                <Label Content="目前工單" Canvas.Left="7" Canvas.Top="92"/>
+                <TextBox x:Name="TB_WO" Height="23" Canvas.Left="78" TextWrapping="Wrap" Canvas.Top="95" Width="149" IsEnabled="False"/>
+                <Label Content="下一工單" Canvas.Left="242" Canvas.Top="92"/>
+                <TextBox x:Name="TB_WO_NEXT" Height="23" Canvas.Left="314" TextWrapping="Wrap" Canvas.Top="95" Width="149" IsEnabled="False"/>
+                <Label Content="生產料號" Canvas.Left="243" Canvas.Top="57"/>
+                <Label Content="工單數量" Canvas.Left="472" Canvas.Top="57"/>
+                <TextBox x:Name="TB_COUNT" Height="23" Canvas.Left="544" TextWrapping="Wrap" Canvas.Top="60" Width="149" IsEnabled="False"/>
+                <Label Content="目標產量" Canvas.Left="473" Canvas.Top="92"/>
+                <TextBox x:Name="TB_TARGET" Height="23" Canvas.Left="544" TextWrapping="Wrap" Canvas.Top="94" Width="149" IsEnabled="False"/>
+                <Label x:Name="LB_Time" Content="" Canvas.Left="244" Canvas.Top="9" FontSize="18"/>
+                <Image x:Name="Im_M" Height="82" Canvas.Left="759" Canvas.Top="10" Width="103" Source="Resources/Morning.png"/>
+                <Label x:Name="LB_M" Content="早班" Canvas.Left="793" Canvas.Top="88"/>
+                <Image x:Name="Im_N" Height="82" Canvas.Left="879" Canvas.Top="8" Width="103" Source="Resources/Night.png"/>
+                <Label x:Name="LB_N" Content="晚班" Canvas.Left="913" Canvas.Top="88"/>
+                <TextBox x:Name="TB_PART_NO" Height="23" Canvas.Left="314" TextWrapping="Wrap" Canvas.Top="59" Width="149" IsEnabled="False"/>
+            </Canvas>
+        </Border>
+
+    </Grid>
+</Window>
