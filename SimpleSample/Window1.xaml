@@ -36,15 +36,14 @@
             <GroupBox Header="看版功能" Height="290" Canvas.Left="6" Canvas.Top="264" Width="980" FontSize="18" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
         </Canvas>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="152" Margin="10,9,0,0" VerticalAlignment="Top" Width="999">
-            <Canvas Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
-                <Label Content="工號" Canvas.Left="36" Canvas.Top="21" FontSize="20"/>
-                <Label Content="姓名" Canvas.Left="38" Canvas.Top="93" FontSize="20"/>
+            <Canvas>
+                <Canvas.Background>
+                    <ImageBrush ImageSource="Resources/APS.jpg"/>
+                </Canvas.Background>
+                <Label Content="工號" Canvas.Left="36" Canvas.Top="21" FontSize="20" Background="#FF080707" Foreground="#FFFCF2F2"/>
+                <Label Content="姓名" Canvas.Left="38" Canvas.Top="93" FontSize="20" Foreground="#FFFFFDFD" Background="#FF121111"/>
                 <Label Content="生產看板" Canvas.Left="163" Canvas.Top="472" FontSize="20" RenderTransformOrigin="0.71,0.966"/>
-                <Button x:Name="Btn_Logout" Canvas.Left="341" Canvas.Top="65" Width="69" Height="67" BorderBrush="{x:Null}" BorderThickness="1" Click="Btn_Logout_Click" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="Resources/logout.png"/>
-                    </Button.Background>
-                </Button>
+                <Button x:Name="Btn_Logout" Canvas.Left="330" Canvas.Top="99" Width="62" Height="31" BorderBrush="{x:Null}" BorderThickness="1" Click="Btn_Logout_Click" Background="#FF201616" Foreground="#FFF4F4F4" Content="登出" />
             </Canvas>
         </Border>
         <TextBox x:Name="TB_User" FontSize="18" Margin="126,27,695.6,675.4" IsEnabled="False"/>

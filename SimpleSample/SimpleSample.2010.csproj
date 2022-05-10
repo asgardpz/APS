@@ -326,9 +326,6 @@
     <Resource Include="Resources\Night.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Chart.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\mail.png" />
   </ItemGroup>
   <ItemGroup>
@@ -350,6 +347,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\time.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Chart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
