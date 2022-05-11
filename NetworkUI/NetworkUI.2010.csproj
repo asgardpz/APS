@@ -106,7 +106,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Utils\Utils.2010.csproj">
       <Project>{E7D6707B-D6EF-4FA8-9374-DC3B7D3CDFD6}</Project>
-      <Name>Utils</Name>
+      <Name>Utils.2010</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
