@@ -1,4 +1,25 @@
 # APS
+Production Scheduler Using Excel Temporary Database
+
+Development platform: VS2019
+
+Programming language: C# WPF
+
+Database: Excel text file
+
+- Main function
+1. Login Information
+- [ ] Job ID: Display the registered job ID
+- [ ] Name: Displays the logged-in name
+- [ ] Logout: Click the logout function to return to the login screen
+2. Scheduling function
+- [ ] Schedule setting: switch the schedule setting screen
+- [ ] Schedule: Switch the Schedule screen
+- [ ] Query Schedule: Switch the query schedule screen
+3. View version function
+- [ ] Production Kanban: Switch production Kanban screen
+
+# APS
 使用Excel暫代資料庫的生產排程程式
 
 開發平台：VS2019
